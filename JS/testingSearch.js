@@ -44,3 +44,4 @@ function testingSite() {
 
 
 //TODO: click event from a button
+$("#searchBtn").on("click", testingSite)
