@@ -5,37 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid-19 Tracker</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
     <link href="/CSS/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html"> COVID-19 Resource Page </a>
-
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="testing.html" id="testing">
-                    Testing Centers
-                </a>
-
-                <a class="navbar-item" href="cdc.html" id="cdc"> CDC Information </a>
-
-                <a class="navbar-item" href="news.html" id="covidNews">
-                    Covid-19 News
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="index.html" class="pure-menu-heading pure-menu-link">COVID-19 Resources</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item">
+                <a href="testing.html" class="pure-menu-link">Testing Centers</a>
+            </li>
+            <li class="pure-menu-item">
+                <a href="cdc.html" class="pure-menu-link">CDC Information </a>
+            </li>
+            <li class="pure-menu-item">
+                <a href="news.html" class="pure-menu-link">COVID-19 News</a>
+            </li>
+        </ul>
+    </div>
 
     <script></script>
 </body>
