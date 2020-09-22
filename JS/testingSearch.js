@@ -1,6 +1,6 @@
 //TODO:// function to search through ajax
 var city = $("#cityInput")
-
+console.log("hello");
 testingSite();
 function testingSite() {
     //The state input field 
@@ -17,7 +17,7 @@ function testingSite() {
         for (var i = 0; i < response.length; i++) {
                 //Creating container for testing location
                 var location = $("<div>");
-                    location.addClass("pure-g")
+                    location.addClass("pure-u-1-3")
                 //Location Name
                 var locationName = $("<h1>");
                     location.text(response[i].name);
@@ -40,8 +40,10 @@ function testingSite() {
                 //Appending to the page
                 $("#body").append(location);
             
-        }})}
+        }
+    $("#state").text(" ");
+    })}
 
 
 //TODO: click event from a button
-$("#searchBtn").on("click", testingSite)
+$("#state").on("submit", testingSite)
