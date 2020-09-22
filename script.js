@@ -1,7 +1,7 @@
 var city = $("#cityInput")
 testingSite();
 function testingSite(){
-	var state = $(this).value;
+
 	$.ajax({
 		url: "https://covid-19-testing.github.io/locations/" + "washington" + "/complete.json",
 		method: "GET"
