@@ -1,34 +1,19 @@
-var city = $("#cityInput")
-testingSite();
-function testingSite(){
-
+function deathToll() {
 	$.ajax({
-		url: "https://covid-19-testing.github.io/locations/" + "washington" + "/complete.json",
+		url: "https://api.covidtracking.com/v1/us/daily.json",
 		method: "GET"
-	}).then(function(response){
-		console.log(response);
-		for (var i = 0; i < response.length; i++){
-			//Test location
-			var location = $("<div>");
-			location.addClass("row");
+	}).then(function (response) {
+		var results = response.death;
+		for (var i = 0; i < results.length; i++) {
+			var countryDiv = $("<div>");
+			var p = $("<p>");
+			p.text(results[i].death);
 
-			var locationName = $("<h1>");
-			location.text(response[i].name);
+			countryDiv.append(p);
 
-			var phoneNumber =("<p>");
-			phoneNumber.text(response[i].phones[0].number);
+			console.log(results);
 
-			var locationAddress = $("<p>");
-			locationAddress.text(response[i].physical_address[0].address-1 + " " + response.physical_address);
-
-			var hoursOperation = $("<p>");
-			hoursOperation.text();
-
-			location.append(locationName);
-			location.append(phoneNumber);
-			location.append(locationAddress);
-			location.append(hoursOperation);
-			$("#body").append(location);
 		}
 	})
-}
+};
+console.log(deathToll)
