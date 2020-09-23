@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+  color: #d2d2d2
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid black;
+  background: #014880;
+  color: #d2d2d2;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+}
+
+#websiteImg {
+    max-width:100%;
+    height:8rem;
+}
+#covidInfoImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
