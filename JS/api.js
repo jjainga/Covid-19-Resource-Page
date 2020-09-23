@@ -22,4 +22,13 @@ $.ajax({
     console.log(response)
 })
 
+//Google scholarly journal 
+$.ajax({
+	url:"http://api.springernature.com/meta/v2/json?q=keyword:clinical studies covid-19 onlinedatefrom:2020-01-01&api_key=bfbcaf96f0d13448d0bcf0757b9411c4",
+	method: "GET"
+}).then(function(data) {
+	console.log(data);
+})
+
+
 
