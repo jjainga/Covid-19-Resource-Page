@@ -13,7 +13,10 @@ $.ajax({
 // Calling the NYT articles into existence
 function updatePage(NYTData) {
   let numArticles = 5;
-  console.log(NYTData.response); //TODO: remove console.log()
+  //let articleDoc = NYTData.response;
+  console.log(NYTData);
+  console.log("------------------------------");
+  //console.log(NYTData); //TODO: remove console.log()
   // Repeat as many times as articles desired on page
   for (let i = 0; i < numArticles; i++) {
     let article = NYTData.response.docs[i];
@@ -22,14 +25,14 @@ function updatePage(NYTData) {
     let createArticleList = $("<ul>");
     createArticleList.addClass("list-group");
 
-    $("article-section").append(createArticleList); //TODO: "article-section" needs a name on html
+    $("#article-section").append(createArticleList); //TODO: "article-section" needs a name on html
 
     // If article has a headline, append it to ArticleList
 
     let headline = article.headline;
     let ArticleListItem = $("<li class='list-group-item articleHeadline'>");
     if (headline && headline.main) {
-      console.log(headline.main); // TODO: remove console.log()
+      //console.log(headline.main); // TODO: remove console.log()
       ArticleListItem.append(
         "<span class='label label-primary'>" +
           articleCount +
@@ -42,8 +45,34 @@ function updatePage(NYTData) {
     //If article has a byline, append it to ArticleList
     let byLine = article.byLine;
     if (byLine && byLine.original) {
-      console.log(byLine.original); // TODO: remove console.log()
+      //console.log(byLine.original); // TODO: remove console.log()
       ArticleListItem.append("<h5>" + byline.original + "</h5>");
     }
+    // Append section to document if it exists
+    let section = article.section_name;
+    // console.log(article.section_name); // TODO: remove console.log()
+    if (section) {
+      ArticleListItem.append("<h5>Section: " + section + "</h5>");
+    }
+    // Log published date, and append to document if exists
+    let pubDate = article.pub_date;
+    // console.log(article.pub_date); // TODO: remove console.log()
+    if (pubDate) {
+      ArticleListItem.append("<h5>" + article.pub_date + "</h5>");
+    }
+
+    // Append and log url
+    ArticleListItem.append(
+      "<a href='" + article.web_url + "'>" + article.web_url + "</a>"
+    );
+    //console.log(article.web_url); // TODO: remove console.log()
+
+    // Append the article
+    createArticleList.append(ArticleListItem);
   }
 }
+function clear() {
+  $("#article-section").empty(); //TODO: "article-section" needs a name on html
+}
+
+updatePage();
