@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  color: #d2d2d2
+  color: #d2d2d2;
 }
 
 button {
@@ -42,3 +42,4 @@ button {
   transition: all 200ms ease;
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
+}
