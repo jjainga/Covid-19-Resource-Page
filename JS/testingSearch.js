@@ -1,13 +1,16 @@
 //TODO:// function to search through ajax
 var city = $("#cityInput")
 console.log("hello");
-testingSite();
+
 function testingSite() {
+
+    console.log("hello")
     //The state input field 
-    var state = $(this).value;
+    var state = $("#state").val().toLowerCase();
+    
     //Ajax request
     $.ajax({
-        url: "https://covid-19-testing.github.io/locations/" + "washington" + "/complete.json",
+        url: "https://covid-19-testing.github.io/locations/" + state + "/complete.json",
         method: "GET"
     }).then(function(response) {
         //testing response
@@ -46,4 +49,4 @@ function testingSite() {
 
 
 //TODO: click event from a button
-$("#state").on("submit", testingSite)
+$("#search").on("click", testingSite);
