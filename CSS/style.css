@@ -1,7 +1,10 @@
 body {
   background-color: black;
   color: #d2d2d2;
+<<<<<<< HEAD
   justify-content: center;
+=======
+>>>>>>> dev
 }
 
 button {
@@ -64,10 +67,10 @@ button {
   margin: 0 auto;
   width: 75%;
 }
-.pure-u-1 {
+#locationDiv {
   background-color: white;
   color: black;
-  padding: 5px;
+  padding: 5px; 
   margin: 5px;
 
 }
@@ -76,3 +79,7 @@ button {
   float: right;
 }
 
+#article-section {
+  background-color: white;
+  color: black;
+}
