@@ -60,3 +60,15 @@ button {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
 }
+
+#searchResponse {
+  margin: 0 auto;
+  width: 75%;
+}
+.pure-u-1 {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+
+}
