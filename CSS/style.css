@@ -1,11 +1,6 @@
 body {
   background-color: black;
   color: #d2d2d2;
-<<<<<<< HEAD
-=======
-  justify-content: center;
-  
->>>>>>> dc4185f7c2faf1bb5206df4d494a8f814f202e16
 }
 
 button {
@@ -63,18 +58,21 @@ button {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
 }
-<<<<<<< HEAD
-=======
 
 #searchResponse {
   margin: 0 auto;
   width: 75%;
 }
-.pure-u-1 {
+#locationDiv {
   background-color: white;
   color: black;
-  padding: 5px;
+  padding: 5px; 
   margin: 5px;
 
 }
->>>>>>> dc4185f7c2faf1bb5206df4d494a8f814f202e16
+
+
+#article-section {
+  background-color: white;
+  color: black;
+}
