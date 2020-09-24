@@ -23,4 +23,13 @@ function saveTestingSite() {
     var currentName = $(this).siblings('h1').val();
     var currentLocaiton = $(this).siblings('p').val();
     var currentPhone = $(this).siblings('p').val();
+
+    //Checking if the array has values to update, before pushing new values to the array
+    if (testingSite == null ) {
+        savedEvents = [];
+    }
+    else if (testingSite != null) (
+        testingSite = JSON.parse(localStorage.getItem("testingSite"))
+    )
+    
 }
