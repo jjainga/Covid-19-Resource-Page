@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: #d2d2d2;
+  justify-content: center;
 }
 
 button {
@@ -92,6 +93,10 @@ button .search {
 #descriptionAttr {
   font-size: 1.2rem;
   font-style: italic;
+}
+
+.saveBtn {
+  float: right;
 }
 
 #article-section {
