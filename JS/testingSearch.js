@@ -20,8 +20,8 @@ function testingSite() {
     for (var i = 0; i < response.length; i++) {
       //Creating container for testing location
       var location = $("<div>");
-      location.addClass("pure-u-1");
-      location.attr("id", "locationDiv")
+      location.addClass("pure-u-1-2");
+      location.attr("id", "locationDiv");
       //Location Name
       var locationName = $("<h1>");
       location.text(response[i].name);
