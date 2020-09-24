@@ -1,6 +1,11 @@
 body {
   background-color: black;
   color: #d2d2d2;
+<<<<<<< HEAD
+=======
+  justify-content: center;
+  
+>>>>>>> dc4185f7c2faf1bb5206df4d494a8f814f202e16
 }
 
 button {
@@ -23,6 +28,21 @@ button {
   height: 8rem;
 }
 
+#deathToll{
+  font-size: 14px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: underline;
+  background-color: rgba(143, 97, 97, 0.301);
+}
+#deathToll:hover{
+  font-size: 18px;
+  text-align: center;
+  padding-top: 15px;
+  color: salmon;
+  
+  
+}
 #covidInfoImg {
   display: block;
   margin-left: auto;
@@ -43,3 +63,18 @@ button {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+#searchResponse {
+  margin: 0 auto;
+  width: 75%;
+}
+.pure-u-1 {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+
+}
+>>>>>>> dc4185f7c2faf1bb5206df4d494a8f814f202e16
