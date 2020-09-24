@@ -54,21 +54,34 @@ $.ajax({
     }
 
     // Log abstract, and append to document if exists
-    let createShowDiv = $("<div class = 'show'>");
-    let createHideDiv = $("<div class = 'hide'>");
-    ArticleListItem.append(createShowDiv);
-    ArticleListItem.append(createHideDiv);
+    let createHideDiv = $(
+      // "<div class = 'hide'> '<input type = `button` value =  `Show abstract`>' </div>"
+      `<div class = 'hide'> <input type = 'button' value = 'Show abstract' id = 'showBtn'> </div>`
+    );
+
     let abstract = article.abstract;
     // console.log(article.abstract); // TODO: remove console.log()
     if (abstract) {
+      ArticleListItem.append(createHideDiv);
       ArticleListItem.append(
-        "<h5>" +
-          '<input type="button" value="Hide abstract">' +
+        "<div class = 'show'>" +
+          "<h5>" +
+          '<input type="button" value="Hide abstract" id = "hideBtn">' +
+          " " +
           article.abstract +
-          "</h5>"
+          "</h5>" +
+          "</div>"
       );
     }
-
+    // Abstract button handlers
+    $("#showBtn").on("click", function (event) {
+      event.preventDefault();
+      console.log("show!");
+    });
+    $("#hideBtn").on("click", function (event) {
+      event.preventDefault();
+      console.log("hide!");
+    });
     // Append and log url
     ArticleListItem.append(
       "<a href='" + article.url[0].value + "'>" + article.url[0].value + "</a>"
