@@ -17,6 +17,8 @@ function getDeaths(data) {
     //Adds counts onto page
     $("#deathToll").append("This is a " + increase + " daily increase.");
     $("#deathToll").append("There are currently " + inICU + " in ICU. Please be cautious and wear a mask.");
-
+    
+    
+    $("#header").text(" ");
 
 }
