@@ -2,7 +2,6 @@ body {
   background-color: black;
   color: #d2d2d2;
   justify-content: center;
-  
 }
 
 button {
@@ -76,3 +75,4 @@ button {
 .saveBtn {
   float: right;
 }
+
