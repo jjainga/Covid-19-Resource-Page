@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Tracker</title>
+
     <!--PURE AND STYLE.CSS-->
-     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-   <link href="../CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+    <link href="../CSS/style.css" rel="stylesheet">
 
 </head>
 
 <body>
     <!--THE HEADER-->
-    <header>
+    <header id="header">
         <div class="pure-menu pure-menu-horizontal" style="background:#014880 ">
             <a href="index.html" class="pure-menu-heading" id="homePage" style="padding: 3rem;"><img id=websiteImg
                     src="https://www.builders.org/wp-content/uploads/2020/03/COVID-19-900x511-1.jpg"><a>
@@ -27,24 +29,21 @@
                             <a href="cdc.html" class="pure-menu-heading" id="cdcPage" style="color:#d2d2d2;">CDC
                                 Information </a>
                         </li>
-                        
-                    </ul>
+        </div>
+        </ul>
         </div>
     </header>
 
-    <div id="container"> 
-        <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
- <!--SCRIPT-->   
-        <script src="https://www.bing.com/widget/bootstrap.answer.js" async=""></script>
-    </div>
-    </div>
-
-<!--Darrian added id for JS purposes-->
-<div id="container" class="deathToll">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- NEW STATISTICS?-->
+    <main class="pure-g">
+        <section class="pure-u-1 pure-u-md-1-4">
+            <div class="bingwidget" data-type="covid19_stats_map" data-market="en-us" data-language="en-us"
+                data-location-id="/United States"></div>
+        </section>
+        <section class="pure-u-1 pure-u-md-3-4" id="article-section"></section>
+    </main>
     <script src="../JS/script.js"></script>
+    <script src=“JS/nyt.js”> </script> <script src="https://www.bing.com/widget/bootstrap.answer.js" async=""></script>
     <script src="../JS/api.js"></script>
-</div>
-</body>
 
 </html>

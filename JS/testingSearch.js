@@ -4,23 +4,23 @@ console.log("hello");
 
 function testingSite() {
 
-    console.log("hello")
-    //The state input field 
-    var state = $("#state").val().toLowerCase();
-    
-    //Ajax request
-    $.ajax({
-        url: "https://covid-19-testing.github.io/locations/" + state + "/complete.json",
-        method: "GET"
-    }).then(function(response) {
-        //testing response
-        console.log(response);
+  console.log("hello")
+  //The state input field 
+  var state = $("#state").val().toLowerCase();
+
+  //Ajax request
+  $.ajax({
+    url: "https://covid-19-testing.github.io/locations/" + state + "/complete.json",
+    method: "GET"
+  }).then(function (response) {
+    //testing response
+    console.log(response);
 
     //TODO://setup a loop to pull from each object based on city
     for (var i = 0; i < response.length; i++) {
       //Creating container for testing location
       var location = $("<div>");
-      location.addClass("pure-u-1-3");
+      location.addClass("pure-u-1-2");
       //Location Name
       var locationName = $("<h1>");
       location.text(response[i].name);
@@ -31,10 +31,10 @@ function testingSite() {
       var locationAddress = $("<p>");
       locationAddress.text(
         response[i].physical_address[0].address_1 +
-          " " +
-          response[i].physical_address[0].city +
-          " " +
-          response[i].physical_address[0].state_province
+        " " +
+        response[i].physical_address[0].city +
+        " " +
+        response[i].physical_address[0].state_province
       );
       //Hours or operations
       var hoursOperation = $("<p>");

@@ -19,6 +19,6 @@ function getDeaths(data) {
     $("#deathToll").append("There are currently " + inICU + " in ICU. Please be cautious and wear a mask.");
     
     
-    $("#header").text(" ");
+    $("#container").text(" ");
 
 }
