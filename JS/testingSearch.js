@@ -21,9 +21,9 @@ function testingSite() {
       //Creating container for testing location
       var location = $("<div>");
       location.addClass("pure-u-1");
+      location.attr("id", "locationDiv")
       //Location Name
       var locationName = $("<h1>");
-      locationName.attr("id", "locationAttr");
       location.text(response[i].name);
       //Phone number
       var phoneNumber = $("<p>")
