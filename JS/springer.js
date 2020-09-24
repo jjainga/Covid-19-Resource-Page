@@ -19,12 +19,13 @@ $.ajax({
   for (let i = 0; i < numArticles; i++) {
     let article = response.records[i];
     let articleCount = i + 1;
+    let articleSection = $("#article-section");
     // console.log(springerArticle.records[0].title);
 
     let createArticleList = $("<ul>");
     createArticleList.addClass("list-group");
 
-    $("#article-section").append(createArticleList); //TODO: "article-section" needs a name on html?
+    articleSection.append(createArticleList); //TODO: "article-section" needs a name on html?
 
     // If article has a title, append it to ArticleList
 
