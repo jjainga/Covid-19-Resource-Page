@@ -106,13 +106,6 @@ $.ajax({
 
     btnHome.append(abstractToggleButton);
 
-    let saveButton = $(
-      `<button id= "saveArtBtn">Save <i class="fas fa-share-square"></i> </button>`
-    );
-    saveButton.on("click", function (event) {
-      event.preventDefault();
-      saveArticle(article);
-    });
     btnHome.append(saveButton); //TODO: append on same line as abstract button?
     // Append and log url
     li.append(`<a href="${article.url[0].value}">Go to article page</a>`);
