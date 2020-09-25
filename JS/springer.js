@@ -1,94 +1,115 @@
-//let searchTerm = "COVID-19"; // TODO: Test other key words to see if they are more relevant
+//let searchTerm = "COVID-19"; // TODO: Test other key words to see if they are more relevant?
 
 //AJAX call for Springer Nature
 $.ajax({
   url:
     "http://api.springernature.com/meta/v2/json?q=keyword:clinical studies covid-19 onlinedatefrom:2020-01-01&api_key=bfbcaf96f0d13448d0bcf0757b9411c4",
   method: "GET",
-}).then(function updatePage(response) {
-  // console.log(springerArticle.records[0])
-  // Calling the Springer articles into existence
+}).then(function (response) {
+  const articleSection = $("#article-section");
 
-  // console.log(response);
-  // console.log(response.records[0].title);
-  // console.log(response.records[0].onlineDate);
-  // console.log(response.records[0].abstract);
-  // console.log(response.records[0].url[0].value);
-  let numArticles = 5; //TODO: remove console.log()
+  const articleList = $(`<ul class="list-group">`);
+
+  // Calling the Springer articles into existence
+  const maxArticles = 5;
+  let articles = response.records.slice(0, maxArticles);
   // Repeat as many times as articles desired on page
-  for (let i = 0; i < numArticles; i++) {
-    let article = response.records[i];
-    let articleCount = i + 1;
-    let articleSection = $("#article-section");
+  for (let i = 0; i < articles.length; i++) {
+    let article = articles[i];
+
     // console.log(springerArticle.records[0].title);
 
-    let createArticleList = $("<ul>");
-    createArticleList.addClass("list-group");
-
-    articleSection.append(createArticleList); //TODO: "article-section" needs a name on html?
+    let li = $(`<li class="list-group-item articleHeadline">`);
 
     // If article has a title, append it to ArticleList
-
-    let title = article.title;
-
-    let ArticleListItem = $("<li class='list-group-item articleHeadline'>");
-    if (title) {
-      //console.log(title.main); // TODO: remove console.log()
-      ArticleListItem.append(
-        "<span class='label label-primary'>" +
-          articleCount +
-          "</span>" +
-          "<strong> " +
-          title +
-          "</strong>"
+    if (article.title) {
+      li.append(
+        // `<span class='label label-primary'>
+        //   ${i + 1}
+        // </span>`,
+        `<strong>
+          ${article.title}
+        </strong>`
       );
-      console.log(title);
+      console.log(article.title);
     }
     //If article has a published onlineDate, append it to ArticleList
-    let onlineDate = article.onlineDate;
-    if (onlineDate) {
-      //console.log(onlineDate.original); // TODO: remove console.log()
-      ArticleListItem.append(
-        "<h5>" + "Published online: " + onlineDate + "</h5>"
+    if (article.onlineDate) {
+      li.append(
+        `<h5>
+          Published online: ${article.onlineDate}
+        </h5>`
       );
     }
-
-    // Log abstract, and append to document if exists
-    let createHideDiv = $(
-      // "<div class = 'hide'> '<input type = `button` value =  `Show abstract`>' </div>"
-      `<div class = 'hide'> <input type = 'button' value = 'Show abstract' id = 'showBtn'> </div>`
-    );
-
-    let abstract = article.abstract;
-    // console.log(article.abstract); // TODO: remove console.log()
-    if (abstract) {
-      ArticleListItem.append(createHideDiv);
-      ArticleListItem.append(
-        "<div class = 'show'>" +
-          "<h5>" +
-          '<input type="button" value="Hide abstract" id = "hideBtn">' +
-          " " +
-          article.abstract +
-          "</h5>" +
-          "</div>"
-      );
-    }
-    // Abstract button handlers
-    $("#showBtn").on("click", function (event) {
+    let saveButton = $(`<button><i class="fas fa-share-square"></i> </button>`);
+    saveButton.on("click", function (event) {
       event.preventDefault();
-      console.log("show!");
+      saveArticle(article);
     });
-    $("#hideBtn").on("click", function (event) {
+    li.append(saveButton); //TODO: append on same line as abstract button?
+
+    // Creates the abstract show/hide button
+    let abstractToggleButton = $(`<button>Show Abstract</button>`);
+    let hideAbstract = true;
+    let abstractDiv;
+    abstractToggleButton.on("click", function (event) {
       event.preventDefault();
-      console.log("hide!");
+      // Log abstract, and append to document after clicking the "show" button
+
+      if (hideAbstract) {
+        console.log("show!");
+        abstractToggleButton.text("Hide Abstract");
+        abstractDiv = $(
+          `<div>
+            <h5>Abstract</h5>
+            <p>
+              ${article.abstract}
+            </p>
+          </div>`
+        );
+        abstractToggleButton.after(abstractDiv);
+        // Removes the abstract if the button is clicked again
+      } else {
+        console.log("hide!");
+        abstractToggleButton.text("Show Abstract");
+        abstractDiv.remove();
+        abstractDiv = undefined;
+      }
+      hideAbstract = !hideAbstract;
     });
+
+    li.append(abstractToggleButton);
+
+    // let abstract = article.abstract;
+    // if (abstract) {
+    //   li.append(createHideDiv);
+    //   li.append(
+    //     "<div class = 'show' style = 'display: none'>" + //set display to none
+    //       "<h5>" +
+    //       '<input type="button" value="Hide abstract" id = "hideBtn">' +
+    //       " " +
+    //       article.abstract +
+    //       "</h5>" +
+    //       "</div>"
+    //   );
+    // }
+    // // Shows the abstract
+    // $("#showBtn").on("click", function (event) {
+    //   event.preventDefault();
+    //   console.log("show!");
+    //   $(".show").attr("style", "display:block");
+    // });
+    // // Hides the abstract
+    // $("#hideBtn").on("click", function (event) {
+    //   event.preventDefault();
+    //   $(".show").attr("style", "display:none");
+    //   console.log("hide!");
+    // });
     // Append and log url
-    ArticleListItem.append(
-      "<a href='" + article.url[0].value + "'>" + article.url[0].value + "</a>"
-    );
-    //console.log(article.url[0].value); // TODO: remove console.log()
+    li.append(`<a href="${article.url[0].value}">${article.url[0].value}</a>`);
 
     // Append the article
-    createArticleList.append(ArticleListItem);
+    articleList.append(li);
   }
+  articleSection.append(articleList);
 });

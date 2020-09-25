@@ -6,21 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Tracker</title>
     <!--PURE AND STYLE.CSS-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="../CSS/style.css" rel="stylesheet">
 
 </head>
 
 
 <body id="body">
-<!--THE HEADER-->
+    <!--THE HEADER-->
     <header>
         <div class="pure-menu pure-menu-horizontal" style="background:#014880 ">
             <a href="index.html" class="pure-menu-heading" id="homePage" style="padding: 3rem;"><img id=websiteImg
@@ -34,26 +31,27 @@
                             <a href="cdc.html" class="pure-menu-heading" id="cdcPage" style="color:#d2d2d2;">CDC
                                 Information </a>
                         </li>
-                       
+
                     </ul>
         </div>
     </header>
- <h4 class="pure-menu-item" id ="deathToll"></h4>
+    <h4 class="pure-menu-item" id="deathToll"></h4>
 
-<!--THE STATE INPUT-->
-<br> <br>
-<!--SEARCH BUTTON-->
-   
+    <!--THE STATE INPUT-->
+    <br> <br>
+    <!--SEARCH BUTTON-->
+
     <section class="pure-g" id="searchResponse">
-        
+
         <input type="state" id="state" placeholder="Enter your State">
         <button id="search" style="display: inline-block;">Search by State</button>
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../JS/testingSearch.js"></script>
 
- <!--SCRIPT-->   
+    <!--SCRIPT-->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../JS/db.js"></script>
     <script src="../JS/testingSearch.js"></script>
     <script src="../JS/savingArt.js"></script>
     <script src="../JS/death.js"></script>
