@@ -14,7 +14,7 @@ button {
   padding: 16px 24px;
   border-radius: 30px;
   transition: all 200ms ease;
-  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  box-shadow: #d2d2d2(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
 }
 
@@ -58,7 +58,7 @@ button .search {
   padding: 16px 24px;
   border-radius: 30px;
   transition: all 200ms ease;
-  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  box-shadow: #d2d2d2(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
 }
 
@@ -69,12 +69,12 @@ button .search {
   color: black;
   width: 75%;
   transition: all 200ms ease;
-  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  box-shadow: #d2d2d2(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
   font-size: 1.4rem;
-  font-weight: bolder;
-  padding: 4px;
-  margin: 5px;
+  font-weight: bolder; line-height: 22px;
+  padding: 16px 24px;
+  border-radius: 30px
 }
 
 #searchResponse {
@@ -105,7 +105,7 @@ button .search {
 .articleHeadline {
   margin: 5px;
   padding: 5px;
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(224, 224, 224); 
 }
 
 .articleHeadline button {
@@ -113,4 +113,121 @@ button .search {
 }
 #diffcolorhomepage {
   background-color: #ffffff;
+}
+/*Importing the font for the page*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+
+.shareButtonPage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, -50%);
+    font-family:'PT Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#shareCons{
+    width: 250px;
+    height: 65px;
+    background: #014880;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+#shareCons ul li a {
+    display:flex;
+    height: 65px;
+    align-items: center;
+    padding: 0 35px;
+    color:#d2d2d2;
+    background-color:#014880; 
+}
+
+#shareCons ul li a.share_btn{
+    justify-content: center;
+}
+#shareCons ul li a.share_btn .text{
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 10px;
+    color:#d2d2d2(36, 2, 2, 0.678);
+}
+#shareCons ul li a.share_btn .icon{
+    width: 35px;
+    height: 35px;
+    background:#d2d2d2(36, 2, 2, 0.678);
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 1s ease;
+    position: relative;
+}
+#shareCons ul li a .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#shareCons ul li a.sm .icon{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: #d2d2d2(36, 2, 2, 0.678); 
+    border-radius: 50%;
+    margin-right:15px;
+}
+#shareCons ul li a .text{
+    letter-spacing: 2px;
+}
+
+#shareCons ul li a.twitter .icon{
+    background-color: #1da1f2;
+}
+#shareCons ul li a.twitter .text{
+    color:  #1da1f2;
+}
+#shareCons ul li a.reddit .icon{
+    background-color: #ff4500;
+}
+#shareCons ul li a.reddit .text{
+    color:  #ff4500;
+}
+#shareCons ul li a.tumblr .icon{
+    background-color:#34526f;
+}
+#shareCons ul li a.tumblr .text{
+    color:  #34526f;
+}
+#shareCons ul li a.instagram .icon{
+    background-color: #c32aa3;
+}
+#shareCons ul li a.instagram .text{
+    color: #c32aa3;
+}
+#shareCons ul li a.facebook .icon{
+    background-color: #3b5998;
+}
+#shareCons ul li a.facebook .text{
+    color:  #3b5998;
+}
+
+#shareCons.active{
+    height: 400px;
+    background: #d2d2d2(0, 0, 0, 0.288);
+
+}
+#shareCons.active ul li a.share_btn .icon{
+    transform: rotate(45deg);
+}
+#shareCons ul li a.sm{
+	visibility: hidden;
+}
+#shareCons.active ul li a.sm {
+    visibility: visible;
+    transition-delay: 0.3s;
 }
