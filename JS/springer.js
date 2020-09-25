@@ -8,7 +8,7 @@ $.ajax({
 }).then(function (response) {
   const articleSection = $("#article-section");
 
-  const articleList = $(`<div class="list-group">`);
+  const articleList = $(`<div class="list-group ulArticle">`);
 
   // Calling the Springer articles into existence
   const maxArticles = 5;
@@ -19,7 +19,7 @@ $.ajax({
 
     // console.log(springerArticle.records[0].title);
 
-    let li = $(`<div class="list-group-item articleHeadline" id="${i}">`)
+    let li = $(`<div class="list-group-item articleHeadline" id="${i}">`);
 
     // If article has a title, append it to ArticleList
     if (article.title) {
@@ -41,15 +41,17 @@ $.ajax({
         </p>`
       );
     }
-    let saveButton = $(`<button class="saveArtBtn" data-save="${i}"><i class="fas fa-share-square"></i> </button>`);
+    let saveButton = $(
+      `<button class="saveArtBtn" data-save="${i}"><i class="fas fa-share-square"></i> </button>`
+    );
     saveButton.on("click", function (event) {
       event.preventDefault();
       var articleArr = JSON.parse(localStorage.getItem("Articles")) || [];
       var article = {
-          title: " ",
-          pubDate: " ",
-          url: " "
-          }
+        title: " ",
+        pubDate: " ",
+        url: " ",
+      };
       console.log($(this).siblings(".title").text());
       var articleTitle = $(this).siblings(".title").text();
       var articleDate = $(this).siblings(".date").text();
@@ -64,7 +66,7 @@ $.ajax({
       //Turning array into string
       var savedArticles = JSON.stringify(articleArr);
       //Save to local Storage
-      localStorage.setItem("Articles", savedArticles)
+      localStorage.setItem("Articles", savedArticles);
     });
     li.append(saveButton); //TODO: append on same line as abstract button?
 
@@ -112,9 +114,8 @@ $.ajax({
       saveArticle(article);
     });
     btnHome.append(saveButton); //TODO: append on same line as abstract button?
-    ////////////////////////
     // Append and log url
-    li.append(`<a href="${article.url[0].value}" class="url">${article.url[0].value}</a>`);
+    li.append(`<a href="${article.url[0].value}">Go to article page</a>`);
 
     // Append the article
     articleList.append(li);

@@ -104,7 +104,7 @@ button .search {
 
 .articleHeadline {
   margin: 5px;
-  padding: 5px;
+  padding: 10px;
   background-color: rgb(231, 229, 229);
   border: black;
   border-style: solid;
@@ -123,6 +123,8 @@ button .search {
 
 .ulArticle {
   list-style-type: none;
+  margin: 10px;
+  padding: 10px;
 }
 
 #articleHeader {
