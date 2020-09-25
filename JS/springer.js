@@ -8,7 +8,7 @@ $.ajax({
 }).then(function (response) {
   const articleSection = $("#article-section");
 
-  const articleList = $(`<ul class="list-group">`);
+  const articleList = $(`<ul class="list-group ulArticle">`);
 
   // Calling the Springer articles into existence
   const maxArticles = 5;
@@ -41,6 +41,7 @@ $.ajax({
         </h5>`
       );
     }
+    //////////////////
     let saveButton = $(`<button><i class="fas fa-share-square"></i> </button>`);
     saveButton.on("click", function (event) {
       event.preventDefault();

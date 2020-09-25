@@ -116,4 +116,15 @@ button .search {
 
 .articleHeadline button {
   color: salmon;
+  float: left;
+}
+
+.ulArticle {
+  list-style-type: none;
+}
+
+#articleHeader {
+  margin-left: 10%;
+  color: white;
+  font-family: sans-serif;
 }
