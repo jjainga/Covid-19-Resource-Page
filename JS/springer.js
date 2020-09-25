@@ -80,31 +80,6 @@ $.ajax({
 
     li.append(abstractToggleButton);
 
-    // let abstract = article.abstract;
-    // if (abstract) {
-    //   li.append(createHideDiv);
-    //   li.append(
-    //     "<div class = 'show' style = 'display: none'>" + //set display to none
-    //       "<h5>" +
-    //       '<input type="button" value="Hide abstract" id = "hideBtn">' +
-    //       " " +
-    //       article.abstract +
-    //       "</h5>" +
-    //       "</div>"
-    //   );
-    // }
-    // // Shows the abstract
-    // $("#showBtn").on("click", function (event) {
-    //   event.preventDefault();
-    //   console.log("show!");
-    //   $(".show").attr("style", "display:block");
-    // });
-    // // Hides the abstract
-    // $("#hideBtn").on("click", function (event) {
-    //   event.preventDefault();
-    //   $(".show").attr("style", "display:none");
-    //   console.log("hide!");
-    // });
     // Append and log url
     li.append(`<a href="${article.url[0].value}">${article.url[0].value}</a>`);
 
