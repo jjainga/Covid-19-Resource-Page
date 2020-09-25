@@ -15,12 +15,12 @@ body{
     background-color: rgba(250, 128, 114, 0.363);
 }
 
-.container{
+.wrapper{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%, -50%);
-    
+
 }
 #shareCons{
     width: 250px;
@@ -37,7 +37,7 @@ body{
     align-items: center;
     padding: 0 35px;
     color:salmon;
-    background-color: rgba(0, 0, 0, 0.39);
+    background-color: rgba(255, 255, 255, 0.39);
 }
 
 #shareCons ul li a.share_btn{
@@ -69,7 +69,7 @@ body{
     position: relative;
     width: 35px;
     height: 35px;
-    background: rgba(36, 2, 2, 0.678);
+    background: rgba(253, 253, 253, 0.678);
     border-radius: 50%;
     margin-right:15px;
 }
@@ -84,11 +84,11 @@ body{
 #shareCons ul li a.twitter .text{
     color:  #1da1f2;
 }
-#shareCons ul li a.reddit .icon{
-    background-color: #ff4500;
+#shareCons ul li a.linkedin .icon{
+    background-color:#0e76a8;
 }
-#shareCons ul li a.reddit .text{
-    color:  #ff4500;
+#shareCons ul li a.linkedin .text{
+    color:  #0e76a8;
 }
 #shareCons ul li a.tumblr .icon{
     background-color:#34526f;
@@ -108,11 +108,17 @@ body{
 #shareCons ul li a.facebook .text{
     color:  #3b5998;
 }
+#shareCons ul li a.bell .icon{
+    background-color: #5729c4;
+}
+#shareCons ul li a.bell .text{
+    color:  #5729c4;
+}
 
 #shareCons.active{
     height: 400px;
-    background: rgba(0, 0, 0, 0.288);
-    
+    background: rgba(255, 252, 252, 0.973);
+
 }
 #shareCons.active ul li a.share_btn .icon{
     transform: rotate(45deg);
