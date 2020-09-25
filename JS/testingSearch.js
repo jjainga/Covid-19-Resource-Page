@@ -45,10 +45,11 @@ function testingSite() {
       testingSaveBtn.addClass("saveBtn")
       var saveIcon = $("<i>").addClass("far fa-share-square")
       testingSaveBtn.append(saveIcon);
-      //Hours or operations
+      //Hours of operations
       var hoursOperation = $("<p>");
       hoursOperation.attr("id", "hoursAttr");
       hoursOperation.text();
+      //Description
       var description = $("<p>");
       description.attr("id", "descriptionAttr");
       description.text(response[i].description);
