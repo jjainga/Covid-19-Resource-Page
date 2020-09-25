@@ -1,6 +1,5 @@
-var shrBtn = document.querySelector(".share_btn");
-var tgglBtn = document.querySelector("#shareCons");
-
+var shrBtn = document.querySelector(".info_btn");
+var tgglBtn = document.querySelector("#infoCons");
 shrBtn.addEventListener("click", function () {
-   shareCons.classList.toggle("active");
+   infoCons.classList.toggle("active");
 })

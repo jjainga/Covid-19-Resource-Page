@@ -22,16 +22,16 @@ body{
     transform: translateX(-50%, -50%);
 
 }
-#shareCons{
-    width: 250px;
+#infoCons{
+    width: 350px;
     height: 65px;
     background: salmon;
-    border-radius: 50px;
+    border-radius: 40px;
     overflow: hidden;
     transition: all 0.2s ease;
 }
 
-#shareCons ul li a {
+#infoCons ul li a {
     display:flex;
     height: 65px;
     align-items: center;
@@ -40,16 +40,16 @@ body{
     background-color: rgba(255, 255, 255, 0.39);
 }
 
-#shareCons ul li a.share_btn{
+#infoCons ul li a.info_btn{
     justify-content: center;
 }
-#shareCons ul li a.share_btn .text{
+#infoCons ul li a.info_btn .text{
     font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 10px;
+    font-size: 18px;
+    letter-spacing: 5px;
     color:rgba(36, 2, 2, 0.678);
 }
-#shareCons ul li a.share_btn .icon{
+#infoCons ul li a.info_btn .icon{
     width: 35px;
     height: 35px;
     background:rgba(36, 2, 2, 0.678);
@@ -58,14 +58,14 @@ body{
     transition: all 1s ease;
     position: relative;
 }
-#shareCons ul li a .icon i{
+#infoCons ul li a .icon i{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
 }
-#shareCons ul li a.sm .icon{
+#infoCons ul li a.sm .icon{
     position: relative;
     width: 35px;
     height: 35px;
@@ -73,60 +73,71 @@ body{
     border-radius: 50%;
     margin-right:15px;
 }
-#shareCons ul li a .text{
+#infoCons ul li a .text{
     letter-spacing: 2px;
 }
 
 /**/
-#shareCons ul li a.twitter .icon{
+#infoCons ul li a.twitter .icon{
     background-color: #1da1f2;
 }
-#shareCons ul li a.twitter .text{
+#infoCons ul li a.twitter .text{
     color:  #1da1f2;
 }
-#shareCons ul li a.linkedin .icon{
+#infoCons ul li a.twitter:hover{
+    background-color: rgba(12, 5, 5, 0.37) 
+}
+#infoCons ul li a.linkedin .icon{
     background-color:#0e76a8;
 }
-#shareCons ul li a.linkedin .text{
+#infoCons ul li a.linkedin .text{
     color:  #0e76a8;
 }
-#shareCons ul li a.tumblr .icon{
-    background-color:#34526f;
-}
-#shareCons ul li a.tumblr .text{
-    color:  #34526f;
-}
-#shareCons ul li a.instagram .icon{
-    background-color: #c32aa3;
-}
-#shareCons ul li a.instagram .text{
-    color: #c32aa3;
-}
-#shareCons ul li a.facebook .icon{
-    background-color: #3b5998;
-}
-#shareCons ul li a.facebook .text{
-    color:  #3b5998;
-}
-#shareCons ul li a.bell .icon{
-    background-color: #5729c4;
-}
-#shareCons ul li a.bell .text{
-    color:  #5729c4;
+#infoCons ul li a.linkedin:hover{
+    background-color: rgba(12, 5, 5, 0.37);
 }
 
-#shareCons.active{
+
+#infoCons ul li a.instagram .icon{
+    background-color: #c32aa3;
+}
+#infoCons ul li a.instagram .text{
+    color: #c32aa3;
+}
+#infoCons ul li a.instagram:hover{
+    background-color: rgba(12, 5, 5, 0.37);
+}
+#infoCons ul li a.facebook .icon{
+    background-color: #3b5998;
+}
+#infoCons ul li a.facebook .text{
+    color:  #3b5998;
+}
+#infoCons ul li a.facebook:hover{
+    background-color: rgba(12, 5, 5, 0.37);
+}
+#infoCons ul li a.bell .icon{
+    background-color: #5729c4;
+}
+#infoCons ul li a.bell .text{
+    color:  #5729c4;
+}
+#infoCons ul li a.bell:hover{
+    background-color: rgba(12, 5, 5, 0.37);
+}
+
+#infoCons.active{
     height: 400px;
     background: rgba(255, 252, 252, 0.973);
 
 }
-#shareCons.active ul li a.share_btn .icon{
+#infoCons.active ul li a.info_btn .icon{
     transform: rotate(45deg);
 }
-#shareCons ul li a.sm{
+#infoCons ul li a.sm{
 	visibility: hidden;
 }
-#shareCons.active ul li a.sm {
+#infoCons.active ul li a.sm {
     visibility: visible;
     transition-delay: 0.3s;
 }
