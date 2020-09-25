@@ -1,19 +1,19 @@
-// //Create Array to save testing Sites
-var testingSite = JSON.parse(localStorage.getItem("Locations")) || [];
-var site = {
+
+//Saving testingSite location to local storage
+function saveTestingSite() {
+    var testingSite = JSON.parse(localStorage.getItem("Locations")) || [];
+    var site = {
     name: " ",
     location: " ",
     phoneNumber: " "
-}
-//Saving testingSite location to local storage
-function saveTestingSite() {
-    //console.log(this);
+    }
+    console.log(this);
     var currentName = $(this).siblings("#locationAttr").text();
     var currentLocation = $(this).siblings("#addressAttr").text();
     var currentPhone = $(this).siblings("#phoneNumberAttr").text();
-        // console.log(currentName);
-        // console.log(currentLocation);
-        // console.log(currentPhone);
+        console.log(currentName);
+        console.log(currentLocation);
+        console.log(currentPhone);
     //Creating object
     site.name = currentName;
     site.location = currentLocation;
@@ -30,20 +30,5 @@ function saveTestingSite() {
     //Save to local storage
     localStorage.setItem("Locations", stringOfSites);  
 }
-
-
-//Create Array for saveing articles
-var articleArr = JSON.parse(localStorage.getItem("Articles")) ||[];
-var article = {
-    title: " ",
-    pubDate: " ",
-    url: " "
-}
-
-//Creae function that saves articles to localstorage
-function saveArticle() {
-    console.log(this);
-}
 //Cick event to save testing sites
 $("#searchResponse").on("click", ".saveBtn", saveTestingSite);
-$("#article-section").on("click", ".saveBtn", saveArticle);

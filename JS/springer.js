@@ -8,7 +8,7 @@ $.ajax({
 }).then(function (response) {
   const articleSection = $("#article-section");
 
-  const articleList = $(`<ul class="list-group">`);
+  const articleList = $(`<div class="list-group">`);
 
   // Calling the Springer articles into existence
   const maxArticles = 5;
@@ -19,7 +19,7 @@ $.ajax({
 
     // console.log(springerArticle.records[0].title);
 
-    let li = $(`<li class="list-group-item articleHeadline">`);
+    let li = $(`<div class="list-group-item articleHeadline" id="${i}">`)
 
     // If article has a title, append it to ArticleList
     if (article.title) {
@@ -27,24 +27,44 @@ $.ajax({
         // `<span class='label label-primary'>
         //   ${i + 1}
         // </span>`,
-        `<strong>
+        `<strong class="title">
           ${article.title}
         </strong>`
       );
-      console.log(article.title);
+      //console.log(article.title);
     }
     //If article has a published onlineDate, append it to ArticleList
     if (article.onlineDate) {
       li.append(
-        `<h5>
+        `<h5 class="date">
           Published online: ${article.onlineDate}
         </h5>`
       );
     }
-    let saveButton = $(`<button><i class="fas fa-share-square"></i> </button>`);
+    let saveButton = $(`<button class="saveArtBtn" data-save="${i}"><i class="fas fa-share-square"></i> </button>`);
     saveButton.on("click", function (event) {
       event.preventDefault();
-      saveArticle(article);
+      var articleArr = JSON.parse(localStorage.getItem("Articles")) || [];
+      var article = {
+          title: " ",
+          pubDate: " ",
+          url: " "
+          }
+      console.log($(this).siblings(".title").text());
+      var articleTitle = $(this).siblings(".title").text();
+      var articleDate = $(this).siblings(".date").text();
+      var articleUrl = $(this).siblings(".url").text();
+      //Crate values fro the object
+      article.title = articleTitle;
+      article.pubDate = articleDate;
+      article.url = articleUrl;
+      //Push to array
+      articleArr.push(article);
+      console.log(articleArr);
+      //Turning array into string
+      var savedArticles = JSON.stringify(articleArr);
+      //Save to local Storage
+      localStorage.setItem("Articles", savedArticles)
     });
     li.append(saveButton); //TODO: append on same line as abstract button?
 
@@ -81,7 +101,7 @@ $.ajax({
     li.append(abstractToggleButton);
 
     // Append and log url
-    li.append(`<a href="${article.url[0].value}">${article.url[0].value}</a>`);
+    li.append(`<a href="${article.url[0].value}" class="url">${article.url[0].value}</a>`);
 
     // Append the article
     articleList.append(li);
