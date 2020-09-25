@@ -52,17 +52,34 @@ $.ajax({
         pubDate: " ",
         url: " ",
       };
-      console.log($(this).siblings(".title").text());
-      var articleTitle = $(this).siblings(".title").text();
-      var articleDate = $(this).siblings(".date").text();
-      var articleUrl = $(this).siblings(".url").text();
+
+      console.log(
+        //title
+        $(this)[0].parentElement.parentElement.childNodes[0].textContent,
+        // date,
+        $(this)[0].parentElement.parentElement.childNodes[1].textContent,
+        //url,
+        $(this)[0].parentElement.parentElement.childNodes[3].getAttribute(
+          "href"
+        )
+      );
+
+      //.siblings(".title").text());
+      var articleTitle = $(this)[0].parentElement.parentElement.childNodes[0]
+        .textContent;
+      console.log(articleTitle);
+      var articleDate = $(this)[0].parentElement.parentElement.childNodes[1]
+        .textContent;
+      var articleUrl = $(
+        this
+      )[0].parentElement.parentElement.childNodes[3].getAttribute("href");
       //Crate values fro the object
       article.title = articleTitle;
       article.pubDate = articleDate;
       article.url = articleUrl;
       //Push to array
       articleArr.push(article);
-      console.log(articleArr);
+      // console.log(articleArr);
       //Turning array into string
       var savedArticles = JSON.stringify(articleArr);
       //Save to local Storage
