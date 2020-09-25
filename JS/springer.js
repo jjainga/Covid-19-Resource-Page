@@ -8,7 +8,7 @@ $.ajax({
 }).then(function (response) {
   const articleSection = $("#article-section");
 
-  const articleList = $(`<ul class="list-group ulArticle">`);
+  const articleList = $(`<div class="list-group ulArticle">`);
 
   // Calling the Springer articles into existence
   const maxArticles = 5;
@@ -19,7 +19,7 @@ $.ajax({
 
     // console.log(springerArticle.records[0].title);
 
-    let li = $(`<li class="list-group-item articleHeadline">`);
+    let li = $(`<div class="list-group-item articleHeadline">`);
 
     // If article has a title, append it to ArticleList
     if (article.title) {
@@ -89,7 +89,7 @@ $.ajax({
     btnHome.append(saveButton); //TODO: append on same line as abstract button?
     ////////////////////////
     // Append and log url
-    li.append(`<a href="${article.url[0].value}">${article.url[0].value}</a>`);
+    li.append(`<a href="${article.url[0].value}">Go to article page</a>`);
 
     // Append the article
     articleList.append(li);
