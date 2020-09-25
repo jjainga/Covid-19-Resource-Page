@@ -81,12 +81,6 @@ button .search {
   margin: 0 auto;
   width: 75%;
 }
-#locationDiv {
-  background-color: white;
-  color: black;
-  padding: 5px;
-  margin: 5px;
-}
 
 #phoneNumberAttr,
 #addressAttr {
@@ -104,7 +98,7 @@ button .search {
 }
 
 #article-section {
-  background-color: #d2d2d2;
+  background-color: #ffffff;
   color: black;
 }
 
@@ -115,5 +109,8 @@ button .search {
 }
 
 .articleHeadline button {
-  color: salmon;
+  color: #d2d2d2;
+}
+#diffcolorhomepage {
+  background-color: #ffffff;
 }
