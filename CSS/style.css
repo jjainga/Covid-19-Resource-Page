@@ -9,13 +9,17 @@ button {
   border: 1px solid black;
   background: #014880;
   color: #d2d2d2;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22px;
   padding: 16px 24px;
   border-radius: 30px;
   transition: all 200ms ease;
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
+}
+
+button .search {
+  background-color: #d2d2d2;
 }
 
 #websiteImg {
@@ -27,15 +31,15 @@ button {
   font-size: 14px;
   text-align: center;
   padding: 15px;
-  text-decoration: underline;
-  background-color: rgba(143, 97, 97, 0.301);
+  background-color: #bd2b2f;
 }
 #deathToll:hover {
   font-size: 18px;
   text-align: center;
   padding-top: 15px;
-  color: salmon;
+  color: black;
 }
+
 #covidInfoImg {
   display: block;
   margin-left: auto;
@@ -47,14 +51,30 @@ button {
   display: inline-block;
   width: 390px;
   margin: 20px auto;
+  background-color: #d2d2d2;
   border: 1px solid black;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22px;
   padding: 16px 24px;
   border-radius: 30px;
   transition: all 200ms ease;
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
+}
+
+#locationDiv {
+  background-color: #d2d2d2;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  width: 75%;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  padding: 4px;
+  margin: 5px;
 }
 
 #searchResponse {
@@ -68,12 +88,23 @@ button {
   margin: 5px;
 }
 
+#phoneNumberAttr,
+#addressAttr {
+  font-size: 1.3rem;
+  color: #bd2b2f;
+}
+
+#descriptionAttr {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
 .saveBtn {
   float: right;
 }
 
 #article-section {
-  background-color: white;
+  background-color: #d2d2d2;
   color: black;
 }
 
@@ -84,4 +115,5 @@ button {
 }
 
 .articleHeadline button {
+  color: salmon;
 }

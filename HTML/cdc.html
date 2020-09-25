@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Tracker</title>
-    <!--PURE AND STYLE.CSS-->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
         integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
@@ -14,7 +13,6 @@
 </head>
 
 <body>
-    <!--THE HEADER-->
     <header>
         <div class="pure-menu pure-menu-horizontal" style="background:#014880 ">
             <a href="index.html" class="pure-menu-heading" id="homePage" style="padding: 3rem;"><img id=websiteImg
@@ -31,7 +29,7 @@
                     </ul>
         </div>
     </header>
-
+    <h4 class="pure-menu-item" id="deathToll"></h4>
     <p>
         <!--THE ENTIRE CDC INFO-->
     <h1 style="text-align: center;">Coronavirus (COVID-19)</h1>
@@ -87,12 +85,12 @@
         yourself.
     </h4>
     </p>
-    <!--CDC BUTTON LINK-->
     <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html"><button>For More Information from the CDC Click
             Here!</button></a>
 
-    <!--SCRIPT-->
-    <script></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../JS/testingSearch.js"></script>
+    <script src="../JS/death.js"></script>
 
 
 </body>
