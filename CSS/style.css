@@ -81,12 +81,6 @@ button .search {
   margin: 0 auto;
   width: 75%;
 }
-#locationDiv {
-  background-color: white;
-  color: black;
-  padding: 5px;
-  margin: 5px;
-}
 
 #phoneNumberAttr,
 #addressAttr {
@@ -104,7 +98,7 @@ button .search {
 }
 
 #article-section {
-  background-color: #d2d2d2;
+  background-color: #ffffff;
   color: black;
 }
 
@@ -119,18 +113,14 @@ button .search {
 }
 
 .articleHeadline button {
-  color: salmon;
+  color: #d2d2d2;
   font-size: small;
   margin: 5px;
   padding: 4px 6px;
   /* float: left; */
   display: inline-block;
 }
-#abstractBtn {
-}
-#saveArtBtn {
-  left: 100%;
-}
+
 .ulArticle {
   list-style-type: none;
 }
@@ -143,4 +133,8 @@ button .search {
 
 .btnHome {
   width: 100%;
+
+}
+#diffcolorhomepage {
+  background-color: #ffffff;
 }
