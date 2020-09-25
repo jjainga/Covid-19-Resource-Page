@@ -36,9 +36,9 @@ $.ajax({
     //If article has a published onlineDate, append it to ArticleList
     if (article.onlineDate) {
       li.append(
-        `<h5 class="date">
+        `<p class="date">
           Published online: ${article.onlineDate}
-        </h5>`
+        </p>`
       );
     }
     let saveButton = $(`<button class="saveArtBtn" data-save="${i}"><i class="fas fa-share-square"></i> </button>`);
@@ -69,7 +69,11 @@ $.ajax({
     li.append(saveButton); //TODO: append on same line as abstract button?
 
     // Creates the abstract show/hide button
-    let abstractToggleButton = $(`<button>Show Abstract</button>`);
+    let btnHome = $(`<div class = "btnHome"></div>`);
+    li.append(btnHome);
+    let abstractToggleButton = $(
+      `<button id = "abstractBtn">Show Abstract</button>`
+    );
     let hideAbstract = true;
     let abstractDiv;
     abstractToggleButton.on("click", function (event) {
@@ -98,8 +102,17 @@ $.ajax({
       hideAbstract = !hideAbstract;
     });
 
-    li.append(abstractToggleButton);
+    btnHome.append(abstractToggleButton);
 
+    let saveButton = $(
+      `<button id= "saveArtBtn">Save <i class="fas fa-share-square"></i> </button>`
+    );
+    saveButton.on("click", function (event) {
+      event.preventDefault();
+      saveArticle(article);
+    });
+    btnHome.append(saveButton); //TODO: append on same line as abstract button?
+    ////////////////////////
     // Append and log url
     li.append(`<a href="${article.url[0].value}" class="url">${article.url[0].value}</a>`);
 
