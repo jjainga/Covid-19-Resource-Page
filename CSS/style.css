@@ -141,116 +141,128 @@ button .search {
   background-color: #ffffff;
 }
 /*Importing the font for the page*/
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
 
-.shareButtonPage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%, -50%);
-  font-family: "PT Sans", sans-serif;
+.infoButtonPage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, -50%);
+    font-family:'PT Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#infoCons{
+    width: 250px;
+    height: 65px;
+    background: #014880;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    margin-top: 0;
+}
+
+#infoCons ul li a {
+    display:flex;
+    height: 65px;
+    align-items: center;
+    padding: 0 35px;
+    color:#d2d2d2;
+    background-color:#014880; 
+}
+
+#infoCons ul li a.info_btn{
+    justify-content: center;
+    
+}
+#infoCons ul li a.info_btn .text{
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0px;
+    left: 14px;
+    color:#d2d2d2(36, 2, 2, 0.678);
+}
+#infoCons ul li a.info_btn .icon{
+    width: 35px;
+    height: 35px;
+    background:#d2d2d2(36, 2, 2, 0.678);
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 1s ease;
+    position: relative;
+    justify-content: space-around;
+}
+#infoCons ul li a .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#infoCons ul li a.sm .icon{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: #d2d2d2(36, 2, 2, 0.678); 
+    border-radius: 50%;
+    margin-right:15px;
+}
+#infoCons ul li a .text{
+    letter-spacing: 2px;
+}
+
+#infoCons ul li a.twitter .icon{
+    background-color: #1da1f2;
+}
+#infoCons ul li a.twitter .text{
+    color:  #d2d2d2;
+}
+#infoCons ul li a.rss .icon{
+    color: #ff4500;
+}
+#infoCons ul li a.rss .text{
+    color:  #d2d2d2;
+}
+#infoCons ul li a.linkedin .icon{
+    background-color:#34526f;
+}
+#infoCons ul li a.linkedin .text{
+    color:  #d2d2d2;
+}
+#infoCons ul li a.instagram .icon{
+    color: #c32aa3;
+    border-radius: 0;
+  
+}
+
+#infoCons ul li a.instagram .text{
+    color: #d2d2d2;
+}
+
+#infoCons ul li a.facebook .text{
+    color: #d2d2d2;
+}
+
+#infoCons.active{
+    height: 400px;
+    background: #d2d2d2(0, 0, 0, 0.288);
+
+}
+#infoCons.active ul li a.info_btn .icon{
+    transform: rotate(45deg);
+}
+#infoCons ul li a.sm{
+	visibility: hidden;
+}
+#infoCons.active ul li a.sm {
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+ul{
   list-style: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-#shareCons {
-  width: 250px;
-  height: 65px;
-  background: #014880;
-  border-radius: 50px;
-  overflow: hidden;
-  transition: all 0.2s ease;
-}
-
-#shareCons ul li a {
-  display: flex;
-  height: 65px;
-  align-items: center;
-  padding: 0 35px;
-  color: #d2d2d2;
-  background-color: #014880;
-}
-
-#shareCons ul li a.share_btn {
   justify-content: center;
-}
-#shareCons ul li a.share_btn .text {
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 10px;
-  color: #d2d2d2(36, 2, 2, 0.678);
-}
-#shareCons ul li a.share_btn .icon {
-  width: 35px;
-  height: 35px;
-  background: #d2d2d2(36, 2, 2, 0.678);
-  display: inline-block;
-  border-radius: 50%;
-  transition: all 1s ease;
-  position: relative;
-}
-#shareCons ul li a .icon i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#shareCons ul li a.sm .icon {
-  position: relative;
-  width: 35px;
-  height: 35px;
-  background: #d2d2d2(36, 2, 2, 0.678);
-  border-radius: 50%;
-  margin-right: 15px;
-}
-#shareCons ul li a .text {
-  letter-spacing: 2px;
-}
-
-#shareCons ul li a.twitter .icon {
-  background-color: #1da1f2;
-}
-#shareCons ul li a.twitter .text {
-  color: #1da1f2;
-}
-#shareCons ul li a.reddit .icon {
-  background-color: #ff4500;
-}
-#shareCons ul li a.reddit .text {
-  color: #ff4500;
-}
-#shareCons ul li a.tumblr .icon {
-  background-color: #34526f;
-}
-#shareCons ul li a.tumblr .text {
-  color: #34526f;
-}
-#shareCons ul li a.instagram .icon {
-  background-color: #c32aa3;
-}
-#shareCons ul li a.instagram .text {
-  color: #c32aa3;
-}
-#shareCons ul li a.facebook .icon {
-  background-color: #3b5998;
-}
-#shareCons ul li a.facebook .text {
-  color: #3b5998;
-}
-
-#shareCons.active {
-  height: 400px;
-  background: #d2d2d2(0, 0, 0, 0.288);
-}
-#shareCons.active ul li a.share_btn .icon {
-  transform: rotate(45deg);
-}
-#shareCons ul li a.sm {
-  visibility: hidden;
-}
-#shareCons.active ul li a.sm {
-  visibility: visible;
-  transition-delay: 0.3s;
+  margin: 0 auto;
 }
