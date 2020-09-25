@@ -30,5 +30,20 @@ function saveTestingSite() {
     //Save to local storage
     localStorage.setItem("Locations", stringOfSites);  
 }
+
+
+//Create Array for saveing articles
+var articleArr = JSON.parse(localStorage.getItem("Articles")) ||[];
+var article = {
+    title: " ",
+    pubDate: " ",
+    url: " "
+}
+
+//Creae function that saves articles to localstorage
+function saveArticle() {
+    console.log(this);
+}
 //Cick event to save testing sites
 $("#searchResponse").on("click", ".saveBtn", saveTestingSite);
+$("#article-section").on("click", ".saveBtn", saveArticle);
