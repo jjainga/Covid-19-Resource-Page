@@ -41,7 +41,6 @@ $.ajax({
         </p>`
       );
     }
-    //////////////////
 
     // Creates the abstract show/hide button
     let btnHome = $(`<div class = "btnHome"></div>`);
@@ -87,7 +86,6 @@ $.ajax({
       saveArticle(article);
     });
     btnHome.append(saveButton); //TODO: append on same line as abstract button?
-    ////////////////////////
     // Append and log url
     li.append(`<a href="${article.url[0].value}">Go to article page</a>`);
 
