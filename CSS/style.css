@@ -3,7 +3,6 @@ body {
   color: #d2d2d2;
   justify-content: center;
 }
-
 button {
   display: block;
   margin: 20px auto;
@@ -34,7 +33,6 @@ button .search {
   padding: 15px;
   background-color: #bd2b2f;
 }
-
 #deathToll:hover {
   font-size: 18px;
   text-align: center;
@@ -83,6 +81,12 @@ button .search {
   margin: 0 auto;
   width: 75%;
 }
+#locationDiv {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+}
 
 #phoneNumberAttr,
 #addressAttr {
@@ -102,4 +106,14 @@ button .search {
 #article-section {
   background-color: #d2d2d2;
   color: black;
+}
+
+.articleHeadline {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(224, 224, 224);
+}
+
+.articleHeadline button {
+  color: salmon;
 }

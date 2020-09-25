@@ -31,10 +31,10 @@ $.ajax({
   console.log(data);
 });
 
-$.ajax({
-  url:
-    "https://serpapi.com/search?engine=google_scholar&q=covid-19&api_key=ca699a8bfbc1d55e7dd666c92f2e53d07cba60ad16625b48fc32e844109521e4&output=json",
-  method: "GET",
-}).then(function (response) {
-  console.log(response);
-});
+// $.ajax({
+//   url:
+//     "https://serpapi.com/search?engine=google_scholar&q=covid-19&api_key=ca699a8bfbc1d55e7dd666c92f2e53d07cba60ad16625b48fc32e844109521e4&output=json",
+//   method: "GET",
+// }).then(function (response) {
+//   console.log(response);
+// });
