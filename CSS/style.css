@@ -111,9 +111,36 @@ button .search {
 .articleHeadline {
   margin: 5px;
   padding: 5px;
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(231, 229, 229);
+  border: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
 }
 
 .articleHeadline button {
   color: salmon;
+  font-size: small;
+  margin: 5px;
+  padding: 4px 6px;
+  /* float: left; */
+  display: inline-block;
+}
+#abstractBtn {
+}
+#saveArtBtn {
+  left: 100%;
+}
+.ulArticle {
+  list-style-type: none;
+}
+
+#articleHeader {
+  margin-left: 10%;
+  color: white;
+  font-family: sans-serif;
+}
+
+.btnHome {
+  width: 100%;
 }
