@@ -266,3 +266,19 @@ ul{
   justify-content: center;
   margin: 0 auto;
 }
+
+.saveResults {
+  text-align: center;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.savedDiv {
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid red;
+  box-shadow: 2px 2px salmon;
+  text-align: left;
+  margin: 5px;
+  padding: 5px;
+}
