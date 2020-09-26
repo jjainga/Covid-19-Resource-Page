@@ -7,7 +7,8 @@ function displayLocations () {
     for (var j = 0; j < testingSites.length; j++) {
         //Creating Div
         var locationDiv = $("<div>");
-            locationDiv.addClass("pure-u-1-3");
+            locationDiv.addClass("pure-u-1-1");
+            locationDiv.addClass("savedDiv")
         //Creating Title
         var title = $("<h2>");
             title.text(testingSites[j].name);
@@ -36,7 +37,8 @@ function displayArt () {
     for (var t = 0; t < myArticles.length; t++) {
         //Creating Div
         var articleDiv = $("<div>");
-            articleDiv.addClass("pure-u-1-3");
+            articleDiv.addClass("pure-u-1-1");
+            articleDiv.addClass("savedDiv")
         //Creating Title
         var name = $("<h2>");
             name.text(myArticles[t].title);
