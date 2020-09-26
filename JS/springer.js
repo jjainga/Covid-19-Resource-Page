@@ -85,7 +85,7 @@ $.ajax({
       //Save to local Storage
       localStorage.setItem("Articles", savedArticles);
     });
-    li.append(saveButton); //TODO: append on same line as abstract button?
+    li.append(saveButton);
 
     // Creates the abstract show/hide button
     let btnHome = $(`<div class = "btnHome"></div>`);
@@ -123,7 +123,7 @@ $.ajax({
 
     btnHome.append(abstractToggleButton);
 
-    btnHome.append(saveButton); //TODO: append on same line as abstract button?
+    btnHome.append(saveButton);
     // Append and log url
     li.append(`<a href="${article.url[0].value}">Go to article page</a>`);
 
