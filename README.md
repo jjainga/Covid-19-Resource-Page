@@ -26,8 +26,10 @@
 
 **Preview**
 
-![Screen Shot 2020-09-26 at 10 45 26 AM](https://user-images.githubusercontent.com/68709356/94347006-85774000-ffe5-11ea-8c06-bde1826b8929.png)
+<img width="1792" alt="Screen Shot 2020-09-26 at 11 26 59 PM" src="https://user-images.githubusercontent.com/68709356/94375025-7798ec00-00c5-11eb-9f36-93ead58d1019.png">
 
-![Screen Shot 2020-09-26 at 10 47 27 AM](https://user-images.githubusercontent.com/68709356/94347028-c0797380-ffe5-11ea-9bb9-c561fccc19eb.png)
+<img width="1579" alt="Screen Shot 2020-09-26 at 11 27 18 PM" src="https://user-images.githubusercontent.com/68709356/94375046-9eefb900-00c5-11eb-8358-33120e1ea0e5.png">
 
-![Screen Shot 2020-09-26 at 10 54 38 AM](https://user-images.githubusercontent.com/68709356/94347150-ba37c700-ffe6-11ea-97a2-9487feebe7b4.png)
+<img width="1708" alt="Screen Shot 2020-09-26 at 11 28 38 PM" src="https://user-images.githubusercontent.com/68709356/94375054-ae6f0200-00c5-11eb-97bc-ee084500b5fd.png">
+
+<img width="1784" alt="Screen Shot 2020-09-26 at 11 28 56 PM" src="https://user-images.githubusercontent.com/68709356/94375066-c0e93b80-00c5-11eb-9572-e0a9014d5032.png">
