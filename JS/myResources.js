@@ -7,17 +7,20 @@ function displayLocations () {
     for (var j = 0; j < testingSites.length; j++) {
         //Creating Div
         var locationDiv = $("<div>");
-            locationDiv.addClass("pure-u-1-1");
-            locationDiv.addClass("savedDiv")
+            locationDiv.addClass("pure-u-1-2");
+            locationDiv.attr("id", "locationDiv");
         //Creating Title
         var title = $("<h2>");
             title.text(testingSites[j].name);
+            title.attr("id", "locationAttr");
         //PhoneNumber
-        var number = $("<h4>");
+        var number = $("<p>");
             number.text(testingSites[j].phoneNumber);
+            number.attr("id", "phoneNumberAttr");
         //Address
-        var address = $("<h4>");
+        var address = $("<p>");
             address.text(testingSites[j].location);
+            address.attr("id", "addressAttr")
         //Appending
     locationDiv.append(title);
     locationDiv.append(number);

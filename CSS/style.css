@@ -3,6 +3,7 @@ body {
   color: #d2d2d2;
   justify-content: center;
 }
+
 button {
   display: block;
   margin: 20px auto;
@@ -33,6 +34,7 @@ button .search {
   padding: 15px;
   background-color: #bd2b2f;
 }
+
 #deathToll:hover {
   font-size: 18px;
   text-align: center;
@@ -71,9 +73,9 @@ button .search {
   transition: all 200ms ease;
   box-shadow: #d2d2d2(37, 39, 89, 0.08) 0px 8px 8px 0;
   cursor: pointer;
-  font-size: 1.4rem;
-  font-weight: bolder;
-  line-height: 22px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
   padding: 16px 24px;
   border-radius: 30px;
 }
@@ -104,13 +106,20 @@ button .search {
 }
 
 .articleHeadline {
-  margin: 5px;
-  padding: 10px;
-  background-color: rgb(231, 229, 229);
-  border: black;
+  background-color: #d2d2d2;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 5px;
+  border-color: #ffffff;
+  color: black;
+  width: 75%;
+  transition: all 200ms ease;
+  box-shadow: #d2d2d2(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  display: inline-block;
 }
 
 .articleHeadline button {
@@ -118,7 +127,6 @@ button .search {
   font-size: small;
   margin: 5px;
   padding: 4px 6px;
-  /* float: left; */
   display: inline-block;
 }
 
@@ -129,22 +137,22 @@ button .search {
 }
 
 #articleHeader {
-  margin-left: 10%;
-  color: black;
+  margin-left: 3%;
   font-family: sans-serif;
 }
 
 .btnHome {
   width: 100%;
 }
+
 #diffcolorhomepage {
   background-color: #ffffff;
 }
+
 /*Importing the font for the page*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap");
 
 .infoButtonPage {
-  /* position: absolute; */
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%, -50%);
@@ -155,6 +163,7 @@ button .search {
   padding: 0;
   box-sizing: border-box;
 }
+
 #infoCons {
   width: 250px;
   height: 65px;
@@ -177,6 +186,7 @@ button .search {
 #infoCons ul li a.info_btn {
   justify-content: center;
 }
+
 #infoCons ul li a.info_btn .text {
   font-weight: 700;
   font-size: 20px;
@@ -184,6 +194,7 @@ button .search {
   left: 14px;
   color: #d2d2d2(36, 2, 2, 0.678);
 }
+
 #infoCons ul li a.info_btn .icon {
   width: 35px;
   height: 35px;
@@ -194,12 +205,14 @@ button .search {
   position: relative;
   justify-content: space-around;
 }
+
 #infoCons ul li a .icon i {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 #infoCons ul li a.sm .icon {
   position: relative;
   width: 35px;
@@ -208,6 +221,7 @@ button .search {
   border-radius: 50%;
   margin-right: 15px;
 }
+
 #infoCons ul li a .text {
   letter-spacing: 2px;
 }
@@ -215,21 +229,27 @@ button .search {
 #infoCons ul li a.twitter .icon {
   background-color: #1da1f2;
 }
+
 #infoCons ul li a.twitter .text {
   color: #d2d2d2;
 }
+
 #infoCons ul li a.rss .icon {
   color: #ff4500;
 }
+
 #infoCons ul li a.rss .text {
   color: #d2d2d2;
 }
+
 #infoCons ul li a.linkedin .icon {
   background-color: #34526f;
 }
+
 #infoCons ul li a.linkedin .text {
   color: #d2d2d2;
 }
+
 #infoCons ul li a.instagram .icon {
   color: #c32aa3;
   border-radius: 0;
@@ -247,34 +267,22 @@ button .search {
   height: 400px;
   background: #d2d2d2(0, 0, 0, 0.288);
 }
+
 #infoCons.active ul li a.info_btn .icon {
   transform: rotate(45deg);
 }
+
 #infoCons ul li a.sm {
   visibility: hidden;
 }
+
 #infoCons.active ul li a.sm {
   visibility: visible;
   transition-delay: 0.3s;
 }
+
 ul {
   list-style: none;
   justify-content: center;
   margin: 0 auto;
-}
-
-.saveResults {
-  text-align: center;
-  margin: 0 auto;
-  width: 75%;
-}
-
-.savedDiv {
-  background-color: whitesmoke;
-  color: black;
-  border: 1px solid red;
-  box-shadow: 2px 2px salmon;
-  text-align: left;
-  margin: 5px;
-  padding: 5px;
 }
