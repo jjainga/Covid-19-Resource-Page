@@ -1,3 +1,5 @@
+//let searchTerm = "COVID-19"; // TODO: Test other key words to see if they are more relevant?
+
 //AJAX call for Springer Nature
 $.ajax({
   url:
@@ -5,6 +7,7 @@ $.ajax({
   method: "GET",
 }).then(function (response) {
   const articleSection = $("#article-section");
+
   const articleList = $(`<div class="list-group ulArticle">`);
 
   // Calling the Springer articles into existence
@@ -13,15 +16,22 @@ $.ajax({
   // Repeat as many times as articles desired on page
   for (let i = 0; i < articles.length; i++) {
     let article = articles[i];
+
+    // console.log(springerArticle.records[0].title);
+
     let li = $(`<div class="list-group-item articleHeadline" id="${i}">`);
 
     // If article has a title, append it to ArticleList
     if (article.title) {
       li.append(
+        // `<span class='label label-primary'>
+        //   ${i + 1}
+        // </span>`,
         `<strong class="title">
           ${article.title}
         </strong>`
       );
+      //console.log(article.title);
     }
     //If article has a published onlineDate, append it to ArticleList
     if (article.onlineDate) {
@@ -43,8 +53,10 @@ $.ajax({
         url: " ",
       };
 
+      //.siblings(".title").text());
       var articleTitle = $(this)[0].parentElement.parentElement.childNodes[0]
         .textContent;
+      console.log(articleTitle);
       var articleDate = $(this)[0].parentElement.parentElement.childNodes[1]
         .textContent;
       var articleUrl = $(
@@ -56,6 +68,7 @@ $.ajax({
       article.url = articleUrl;
       //Push to array
       articleArr.push(article);
+      // console.log(articleArr);
       //Turning array into string
       var savedArticles = JSON.stringify(articleArr);
       //Save to local Storage
@@ -76,6 +89,7 @@ $.ajax({
       // Log abstract, and append to document after clicking the "show" button
 
       if (hideAbstract) {
+        console.log("show!");
         abstractToggleButton.text("Hide Abstract");
         abstractDiv = $(
           `<div>
@@ -88,6 +102,7 @@ $.ajax({
         abstractToggleButton.after(abstractDiv);
         // Removes the abstract if the button is clicked again
       } else {
+        console.log("hide!");
         abstractToggleButton.text("Show Abstract");
         abstractDiv.remove();
         abstractDiv = undefined;
