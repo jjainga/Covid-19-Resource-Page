@@ -1,22 +1,20 @@
-//TODO:// function to search through ajax
+// function to search through ajax
 var city = $("#cityInput");
-console.log("hello");
-
 function testingSite() {
+  //The state input field
+  var state = $("#state").val().toLowerCase();
 
-    console.log("hello")
-    //The state input field 
-    var state = $("#state").val().toLowerCase();
-    
-    //Ajax request
-    $.ajax({
-        url: "https://covid-19-testing.github.io/locations/" + state + "/complete.json",
-        method: "GET"
-    }).then(function(response) {
-        //testing response
-        console.log(response);
+  //Ajax request
+  $.ajax({
+    url:
+      "https://covid-19-testing.github.io/locations/" +
+      state +
+      "/complete.json",
+    method: "GET",
+  }).then(function (response) {
+    //testing response
 
-    //TODO://setup a loop to pull from each object based on city
+    //set up a loop to pull from each object based on city
     for (var i = 0; i < response.length; i++) {
       //Creating container for testing location
       var location = $("<div>");
@@ -27,7 +25,7 @@ function testingSite() {
       locationName.attr("id", "locationAttr");
       locationName.text(response[i].name);
       //Phone number
-      var phoneNumber = $("<p>")
+      var phoneNumber = $("<p>");
       phoneNumber.attr("id", "phoneNumberAttr");
       phoneNumber.text(response[i].phones[0].number);
       //Address
@@ -42,8 +40,8 @@ function testingSite() {
       );
       //Save buuton
       var testingSaveBtn = $("<button>");
-      testingSaveBtn.addClass("saveBtn")
-      var saveIcon = $("<i>").addClass("far fa-share-square")
+      testingSaveBtn.addClass("saveBtn");
+      var saveIcon = $("<i>").addClass("far fa-share-square");
       testingSaveBtn.append(saveIcon);
       //Hours of operations
       var hoursOperation = $("<p>");
@@ -66,7 +64,6 @@ function testingSite() {
   });
 }
 
-
-//TODO: click event from a button
+// click event from a button
 
 $("#search").on("click", testingSite);
