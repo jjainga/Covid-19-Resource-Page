@@ -95,6 +95,22 @@ button .search {
   border-radius: 30px;
 }
 
+#articleStuff {
+  background-color: #d2d2d2;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  width: 75%;
+  transition: all 200ms ease;
+  box-shadow: #d2d2d2(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  padding: 16px 24px;
+  border-radius: 30px;
+}
+
 #searchResponse {
   margin: 0 auto;
   width: 75%;
