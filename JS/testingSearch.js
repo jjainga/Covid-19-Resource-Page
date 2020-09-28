@@ -1,6 +1,9 @@
 // function to search through ajax
 var city = $("#cityInput");
 function testingSite() {
+  //Clear testing center area
+  $("#searchResults").empty();
+  
   //The state input field
   var state = $("#state").val().toLowerCase();
 
@@ -18,7 +21,7 @@ function testingSite() {
     for (var i = 0; i < response.length; i++) {
       //Creating container for testing location
       var location = $("<div>");
-      location.addClass("pure-u-1-2");
+      location.addClass("pure-u-1-1");
       location.attr("id", "locationDiv");
       //Location Name
       var locationName = $("<h2>");
@@ -58,12 +61,9 @@ function testingSite() {
       location.append(locationAddress);
       location.append(description);
       //Appending to the page
-      $("#searchResponse").append(location);
+      $("#searchResults").append(location);
     }
     $("#state").text(" ");
-  });
-}
-
+  })}
 // click event from a button
-
 $("#search").on("click", testingSite);

@@ -52,8 +52,7 @@ $.ajax({
         pubDate: " ",
         url: " ",
       };
-
-      //.siblings(".title").text());
+      //Creating variables from values from ajax request
       var articleTitle = $(this)[0].parentElement.parentElement.childNodes[0]
         .textContent;
       console.log(articleTitle);
@@ -68,7 +67,6 @@ $.ajax({
       article.url = articleUrl;
       //Push to array
       articleArr.push(article);
-      // console.log(articleArr);
       //Turning array into string
       var savedArticles = JSON.stringify(articleArr);
       //Save to local Storage
@@ -89,7 +87,6 @@ $.ajax({
       // Log abstract, and append to document after clicking the "show" button
 
       if (hideAbstract) {
-        console.log("show!");
         abstractToggleButton.text("Hide Abstract");
         abstractDiv = $(
           `<div>

@@ -317,3 +317,9 @@ ul {
   justify-content: center;
   margin: 0 auto;
 }
+
+.userSearches{
+  margin: 0 auto;
+  width: 95%;
+  text-align: center;
+}
