@@ -22,7 +22,7 @@
 
 **Link to Deployed Website**
 
-> https://jjainga.github.io/Covid-19-Avoid-Area/.
+> https://jjainga.github.io/Covid-19-Resource-Page/.
 
 **Preview**
 
