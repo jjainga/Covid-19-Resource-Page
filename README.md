@@ -18,7 +18,7 @@
 
 **Future Development**
 
-> For future iterations of this application, the developers could integrate Google analytics and use them to let the user know what the population density is of a certain business or type of business (e.g. restaurant, grocery store, coffee shop, etc), allowing the user to judge wether it is a safe time to visit a public location.
+> For future iterations of this application, the developers could integrate Google analytics and use them to let the user know what the population density is of a certain business or type of business (e.g. restaurant, grocery store, coffee shop, etc), allowing the user to judge whether it is a safe time to visit a public location.
 
 **Link to Deployed Website**
 
