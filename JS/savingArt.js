@@ -22,4 +22,4 @@ function saveTestingSite() {
   localStorage.setItem("Locations", stringOfSites);
 }
 //Click event to save testing sites
-$("#searchResponse").on("click", ".saveBtn", saveTestingSite);
+$("#searchResults").on("click", ".saveBtn", saveTestingSite);
