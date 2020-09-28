@@ -53,17 +53,6 @@ $.ajax({
         url: " ",
       };
 
-      console.log(
-        //title
-        $(this)[0].parentElement.parentElement.childNodes[0].textContent,
-        // date,
-        $(this)[0].parentElement.parentElement.childNodes[1].textContent,
-        //url,
-        $(this)[0].parentElement.parentElement.childNodes[3].getAttribute(
-          "href"
-        )
-      );
-
       //.siblings(".title").text());
       var articleTitle = $(this)[0].parentElement.parentElement.childNodes[0]
         .textContent;
