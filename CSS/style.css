@@ -25,7 +25,10 @@ button .search {
 
 #websiteImg {
   max-width: 100%;
-  height: 8rem;
+  max-height: 10rem;
+  padding-bottom: 0%;
+  
+
 }
 
 #deathToll {
@@ -322,4 +325,87 @@ ul {
   margin: 0 auto;
   width: 95%;
   text-align: center;
+}
+/* NEW CODE FOR NAVBAR */
+.custom-wrapper {
+  background-color: #014880;
+  line-height: 4%;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  height: 11rem;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.custom-wrapper.open {
+  height: 20rem;
+}
+
+.custom-menu-3 {
+  text-align: right;
+}
+
+.custom-toggle {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.custom-toggle .bar {
+  background-color: black;
+  display: block;
+  width: 20px;
+  height: 4px;
+  border-radius: 100px;
+  position: absolute;
+  top: 18px;
+  right: 7px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.custom-toggle .bar:first-child {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.custom-toggle.x .bar {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.custom-toggle.x .bar:first-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 47.999em) {
+
+  .custom-menu-3 {
+      text-align: left;
+      
+  }
+
+  .custom-toggle {
+      display: inline-block;
+  }
+
+}
+.pure-menu-list {
+ padding-top: 5rem;
+  display: block;
 }
